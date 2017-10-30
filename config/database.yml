@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username:
+  password:
+  prepared_statements: false
+
+development:
+  <<: *default
+  database: subscription_app_development
+
+test:
+  <<: *default
+  database: subscription_app_test
+
+staging:
+  <<: *default
+  database: subscription_app_staging
+
+production:
+  <<: *default
+  database: subscription_app_release_production
+
